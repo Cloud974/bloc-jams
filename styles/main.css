@@ -30,7 +30,7 @@ body {
   max-width: 64rem;
 }
 
-@media (min-width: 640) {
+@media (min-width: 640px) {
     html {font-size: 112%}
 
     .column {
@@ -47,6 +47,16 @@ body {
     .column.flow-opposite { float:right; }
 }
 
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
   html {font-size: 120%}
+}
+
+.clearfix::before,
+.clearfix::after{
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+  clear: both;
 }
