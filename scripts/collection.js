@@ -3,7 +3,7 @@ var collectionItemTemplate =
     +'  <img src="assets/images/album_covers/01.png">'
     +'  <div class= "collection-album-info caption">'
     +'    <p>'
-    +'      <c class = "album-name" href="album.html"> The Colors </a>'
+    +'      <a class = "album-name" href="album.html"> The Colors </a>'
     +'      <br/>'
     +'      X Songs'
     +'      <br/>'
