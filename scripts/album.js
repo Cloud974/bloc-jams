@@ -28,24 +28,6 @@ var albumMarconi = {
      ]
  };
 
- var albumWhatHappened = {
-     title: 'What Happened?',
-     artist: 'Hi, High, Hi',
-     label: 'CO2',
-     year: '2017',
-     albumArtUrl: 'assets/images/album_covers/FakeCover.jpg',
-     songs: [
-         { title: 'You Can See', duration: '4:16' },
-         { title: 'How about that?', duration: '6:14' },
-         { title: 'Get', duration: '5:19' },
-         { title: 'On my own', duration: '4:21'},
-         { title: 'No matter What', duration: '3:45'},
-         { title: 'Not all for you', duration: '3:05'},
-         { title: 'All Smiles', duration: '1:42'},
-         { title: 'This is the last song', duration: '14:02'}
-     ]
- };
-
  var createSongRow = function(songNumber, songName, songLength) {
     var template =
        '<tr class="album-view-song-item">'
@@ -162,14 +144,4 @@ window.onload = function() {
        });
 
      }
-
-    var albumList = [albumPicasso, albumMarconi, albumWhatHappened];
-    var i = 0
-    albumImage.addEventListener("click", function(event){
-        setCurrentAlbum(albumList[i]);
-        i++;
-        if (i == albumList.length){
-           i = 0;
-        }
-  });
-};
+}
