@@ -189,7 +189,7 @@ var updateSeekPercentage = function($seekBar, seekBarFillRatio) {
  var filterTimeCode = function(timeInSeconds) {
    var minutes = Math.floor(parseInt(timeInSeconds)/60);
    var seconds = Math.floor(parseInt(timeInSeconds) - (minutes * 60));
-   return minutes + ":" + seconds;
+   return minutes + ":" + (seconds < 10 ? '0' + seconds: seconds);
  }
 
 var trackIndex = function(album, song) {
