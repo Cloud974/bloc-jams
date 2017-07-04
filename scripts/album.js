@@ -122,6 +122,8 @@ var updateSeekBarWhileSongPlays = function() {
              var $seekBar = $('.seek-control .seek-bar');
 
              updateSeekPercentage($seekBar, seekBarFillRatio);
+             setCurrentTimeInPlayerBar(filterTimeCode(this.getTime()));
+             setTotalTimeInPlayerBar(filterTimeCode(this.getDuration()));
          });
      }
  };
@@ -175,6 +177,20 @@ var updateSeekPercentage = function($seekBar, seekBarFillRatio) {
          });
      });
  };
+
+ var setCurrentTimeInPlayerBar = function(currentTime) {
+   $('.current-time').text(currentTime);
+ }
+
+ var setTotalTimeInPlayerBar = function (totalTime) {
+   $('.total-time').text(totalTime);
+ }
+
+ var filterTimeCode = function(timeInSeconds) {
+   var minutes = Math.floor(parseInt(timeInSeconds)/60);
+   var seconds = Math.floor(parseInt(timeInSeconds) - (minutes * 60));
+   return minutes + ":" + seconds;
+ }
 
 var trackIndex = function(album, song) {
      return album.songs.indexOf(song);
